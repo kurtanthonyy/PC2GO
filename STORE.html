@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PC2GO</title>
+  <link rel="icon" type="image/png" href="LOGO.png">
+  <!-- Oswald Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    
+/* GENERAL STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Oswald', sans-serif;
+    }
+    body, html {
+      height: 100%;
+      color: white;
+      background-color: black;
+    }
+
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('Deutschlander.otf') format('opentype');
+      }
+  
+
+    /* Underline animation */
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: rgb(255, 255, 255);
+      transition: width 0.3s ease;
+      transform: translateX(-50%);
+    }
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+    
+    
+    /* Logo hover effect */
+    .logo a img {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .logo a img:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    section, footer {
+    position: relative;
+    z-index: 3; /* ensures images, colors, and footer show above video/overlay */
+    }
+    .btn {
+        display: inline-block;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: white;
+        color: black;
+        }
+
+    
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 1); /* black with transparency */
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 80px;
+  margin-right: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* red hover effect (optional) */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+    .site-footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 40px;
+    }
+
+    .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    }
+
+    /* Left */
+    .footer-left {
+    flex: 1;
+    min-width: 200px;
+    }
+
+    .footer-logo {
+    height: 100px;
+    margin-bottom: 15px;
+    }
+
+    .footer-left p {
+    font-size: 0.9rem;
+    color: #aaa;
+    }
+
+    /* Right */
+    .footer-right {
+    flex: 0.6;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    }
+
+    .footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: rgb(74, 61, 255);
+    text-transform: uppercase;
+    }
+
+    .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .footer-column ul li {
+    margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+    }
+
+    footer a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+    }
+
+    footer a:hover::after {
+    width: 100%;
+    }
+
+    footer a {
+    position: relative;
+    display: inline-block;
+    }
+</style>
+
+    <!-- HEADER -->
+<!-- HEADER -->
+    <header id="main-header">
+      <div class="logo">
+        <a href="MAIN.html">
+          <img src="logo.png" alt="Esports Logo" style="height: 80px" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="STORE.html">Builds</a></li>
+          <li><a href="#.html">Peripherals</a></li>
+          <li><a href="#.html">Location</a></li>
+          <li><a href="#.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <div
+        class="social-links"
+        style="margin-left: auto; display: flex; align-items: center"
+      >
+        <a href="https://www.instagram.com/"
+          ><img
+            src="IG.png"
+            alt="Instagram"
+            style="height: 30px; margin-left: 15px"
+        /></a>
+        <a href="https://x.com/"
+          ><img
+            src="X.png"
+            alt="Twitter"
+            style="height: 30px; margin-left: 15px"
+        /></a>
+        <a href="https://facebook.com/"
+          ><img
+            src="FB.png"
+            alt="Facebook"
+            style="height: 30px; margin-left: 15px"
+        /></a>
+      </div>
+    </header>
+
+
+<!-- Hero Banner -->
+<section class="store-hero">
+</section>
+
+<!-- Products Section -->
+<section class="store-products">
+  <h1 class="store-title">NEW ARRIVALS</h1>
+  
+  <div class="product-grid">
+  <!-- Product 1 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="1.png" alt="Product 1 Front" class="front">
+      <img src="1.png" alt="Product 1 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 1</h3>
+      <p>Entry Level</p>
+      <p>Great for Students</p>
+      <div class="product-price">$49.99</div>
+      <div class="color-options">
+        <span style="background: red;"></span>
+        <span style="background: black;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="2.png" alt="Product 2 Front" class="front">
+      <img src="2.png" alt="Product 2 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 2</h3>
+      <p>Entry Level</p>
+      <p>Great for Students</p>
+      <div class="product-price">$39.99</div>
+      <div class="color-options">
+        <span style="background: blue;"></span>
+        <span style="background: gray;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="3.png" alt="Product 3 Front" class="front">
+      <img src="3.png" alt="Product 3 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 3</h3>
+      <p>Mid to High-end</p>
+      <p>Good for Gaming and Streaming</p>
+      <div class="product-price">$59.99</div>
+      <div class="color-options">
+        <span style="background: green;"></span>
+        <span style="background: yellow;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="4.png" alt="Product 4 Front" class="front">
+      <img src="4.png" alt="Product 4 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 4</h3>
+      <p>Mid to High-end</p>
+      <p>Good for Gaming and Streaming</p>
+      <div class="product-price">$44.99</div>
+      <div class="color-options">
+        <span style="background: orange;"></span>
+        <span style="background: black;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="5.png" alt="Product 5 Front" class="front">
+      <img src="5.png" alt="Product 5 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 5</h3>
+      <p>High-end PC build</p>
+      <p>High performance for professionals and gamers</p>
+      <div class="product-price">$29.99</div>
+      <div class="color-options">
+        <span style="background: purple;"></span>
+        <span style="background: white;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="6.png" alt="Product 6 Front" class="front">
+      <img src="mouse.png" alt="Product 6 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>PC 6</h3>
+      <p>High-end PC build</p>
+      <p>High performance for professionals and gamers</p>
+      <div class="product-price">$54.99</div>
+      <div class="color-options">
+        <span style="background: cyan;"></span>
+        <span style="background: navy;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 7 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="mouse.png" alt="Product 7 Front" class="front">
+      <img src="mouse.png" alt="Product 7 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>Mouse</h3>
+      <p>PRX Series</p>
+      <div class="product-price">$34.99</div>
+      <div class="color-options">
+        <span style="background: teal;"></span>
+        <span style="background: gray;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 8 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="keyboard.png" alt="Product 8 Front" class="front">
+      <img src="keyboard.png" alt="Product 8 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>Keyboard</h3>
+      <p>Logitech V2</p>
+      <div class="product-price">$42.99</div>
+      <div class="color-options">
+        <span style="background: maroon;"></span>
+        <span style="background: beige;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 9 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="headset.png" alt="Product 9 Front" class="front">
+      <img src="headset.png" alt="Product 9 Back" class="back">
+    </div>
+    <div class="product-info">
+      <h3>Headset</h3>
+      <p>HyperX Cloud II</p>
+      <div class="product-price">$39.49</div>
+      <div class="color-options">
+        <span style="background: red;"></span>
+        <span style="background: gold;"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Builder -->
+    <section id="builder" class="section builder-section">
+      <div class="container builder-wrap">
+        <div class="builder-left">
+          <h2 class="section-title">Custom PC Builder</h2>
+
+          <div class="builder-form card">
+            <div class="form-row">
+              <label for="preset">Quick Select</label>
+              <select id="preset" class="form-control">
+                <option value="">Preset or build from scratch</option>
+                <option>DIAMOND BUILD (₱53,800)</option>
+                <option>ASCENDANT BUILD (₱95,200)</option>
+                <option>IMMORTAL BUILD (₱110,650)</option>
+                <option>RADIANT BUILD (₱158,950)</option>
+              </select>
+            </div>
+
+            <div class="grid grid-2 gap-sm">
+              <div class="form-col">
+                <label>CPU</label>
+                <select id="cpu" class="form-control">
+                  <option value="" data-price="0" data-socket="" data-mem="">— Select CPU —</option>
+                  <option value="ryzen-5-5600" data-price="5950" data-watt="70" data-socket="AM4" data-mem="DDR4">Ryzen 5 5600 — ₱5,950 — In Stock</option>
+                  <option value="ryzen-5-9600" data-price="11950" data-watt="75" data-socket="AM5" data-mem="DDR5">Ryzen 5 9600 — ₱11,950 — In Stock</option>
+                  <option value="ryzen-7-5700x" data-price="7450" data-watt="75" data-socket="AM4" data-mem="DDR4">Ryzen 7 5700X — ₱7,450 — In Stock</option>
+                  <option value="ryzen-7-7700" data-price="12150" data-watt="90" data-socket="AM5" data-mem="DDR5">Ryzen 7 7700 — ₱12,150 — In Stock</option>
+                  <option value="ryzen-9-9900x" data-price="24950" data-watt="200" data-socket="AM5" data-mem="DDR5">Ryzen 9 9900X — ₱24,950 — In Stock</option>
+                </select>
+              </div>
+
+              <div class="form-col">
+                <label>CPU Cooler</label>
+                <select id="cpuCooler" class="form-control">
+                  <option value="" data-price="0" data-watt="0">— Select Cooler —</option>
+                  <option value="Deepcool AK400 White" data-price="1550" data-watt="6">Deepcool AK400 White — ₱1,550 — In Stock</option>
+                  <option value="DEEPCOOL LM240 Black" data-price="4450" data-watt="10">DEEPCOOL LM240 Black — ₱4,450 — In Stock</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-sm">
+              <div class="form-col">
+                <label>Motherboard</label>
+                <select id="motherboard" class="form-control">
+                  <option value="" data-price="0" data-socket="" data-mem="">— Select Motherboard —</option>
+                  <option value="Gigabyte B850M Eagle Wifi6 Ice (White) -- mATX, " data-price="11550" data-socket="AM5" data-mem="DDR5">Gigabyte B850M Eagle Wifi6 Ice (White) -- mATX — ₱11,550 — In Stock</option>
+                  <option value="Asrock A620M-HDV/M.2 -- mATX, 2 DIMMs, 1 NVMe" data-price="5950" data-socket="AM5" data-mem="DDR5">Asrock A620M-HDV/M.2 -- mATX — ₱5,950 — In Stock</option>
+                  <option value="gigabyte-a520m-k" data-price="3450" data-socket="AM4" data-mem="DDR4">Gigabyte A520M-K V2 — ₱3,450 — In Stock</option>
+                  <option value="asrock-b650i-lightning" data-price="13450" data-socket="AM5" data-mem="DDR5">Asrock B650I Lightning — ₱13,450 — In Stock</option>
+                </select>
+              </div>
+
+              <div class="form-col">
+                <label>Memory</label>
+                <select id="memory" class="form-control">
+                  <option value="" data-price="0" data-mem="" data-watt="0">— Select RAM —</option>
+                  <option value="T.Force Vulcan 2x16GB DDR5 6000MHz CL38 " data-price="7750" data-mem="DDR5" data-watt="4">T.Force Vulcan 2x16GB DDR5 6000MHz CL38  — ₱7,750 — In Stock</option>
+                  <option value="Adata XPG D50 2x8GB DDR4 3600mhz RGB (16GB) RGB (16GB)" data-price="3650" data-mem="DDR4" data-watt="4">Adata XPG D50 2x8GB DDR4 3600mhz RGB (16GB) — ₱3,650 — In Stock</option>
+                  <option value="kingston-16gb-3200" data-price="2850" data-mem="DDR4" data-watt="4">Kingston 16GB DDR4 3200 — ₱2,850 — In Stock</option>
+                  <option value="gskill-tridentz5-32gb" data-price="8950" data-mem="DDR5" data-watt="6">G.Skill Trident Z5 32GB — ₱8,950 — In Stock</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-sm" id="storageContainer">
+              <div>
+                <label>Storage</label>
+                <div class="multi-input" id="storageInputs">
+                  <div class="storage-row">
+                    <select class="storage-select form-control" name="storage[]">
+                      <option value="" data-price="0" data-watt="0">— Select Storage —</option>
+                      <option value="adata-1tb-legend960" data-price="5650" data-watt="3">Adata Legend 960 Max 1TB — ₱5,650 — In Stock</option>
+                      <option value="samsung-990pro-1tb" data-price="6950" data-watt="3">Samsung 990 Pro 1TB — ₱6,950 — In Stock</option>
+                    </select>
+                    <button type="button" class="btn tertiary remove-storage">−</button>
+                  </div>
+                </div>
+                <div class="multi-actions">
+                  <button type="button" id="addStorage" class="btn secondary">+ Add storage</button>
+                  <span class="muted small">Add multiple drives</span>
+                </div>
+              </div>
+
+              <div>
+                <label>Video Card</label>
+                <select id="gpu" class="form-control">
+                  <option value="" data-price="0" data-watt="0">— Select GPU —</option>
+                  <option value="Asrock Steel Legend RX 9070 Steel Legend 16GB OC DDR6 256bit (White)" data-price="44500" data-watt="220">Asrock Steel Legend RX 9070 Steel Legend 16GB OC — ₱44,500 — In Stock</option>
+                  <option value="galax-rtx3060" data-price="17500" data-watt="170">Galax RTX 3060 — ₱17,500 — In Stock</option>
+                  <option value="Palit RTX 5070 Gaming Pro 12GB GDDR7" data-price="39000" data-watt="250">Palit RTX 5070 Gaming Pro 12GB GDDR7 — ₱39,000 — In Stock</option>
+                  <option value="gigabyte-5090" data-price="165000" data-watt="450">Gigabyte RTX 5090 — ₱165,000 — In Stock</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-2 gap-sm">
+              <div>
+                <label>Case</label>
+                <select id="case" class="form-control">
+                  <option value="" data-price="0" data-watt="0">— Select Case —</option>
+                  <option value="Deepcool CH260 Black Hybrid mATX" data-price="3650" data-watt="2">Deepcool CH260 Black Hybrid mATX — ₱3,650 — In Stock</option>
+                  <option value="Darkflash DLM22 Black  (mATX)" data-price="2250" data-watt="2">Darkflash DLM22 Black  (mATX) — ₱2,250 — In Stock</option>
+                  <option value="Tecware Timber M mATX w/ 4pcs non RGB Fans Black" data-price="2450" data-watt="2">Tecware Timber M mATX w/ 4pcs non RGB Fans Black — ₱2,450 — In Stock</option>
+                  <option value="keytech-visor-white" data-price="1550" data-watt="2">Keytech Visor White Mesh — ₱1,550 — In Stock</option>
+                </select>
+              </div>
+
+              <div>
+                <label>Power Supply</label>
+                <select id="psu" class="form-control">
+                  <option value="" data-price="0" data-watt="0">— Select PSU —</option>
+                  <option value="acer-550" data-price="1850" data-watt="550">Acer AC550 550W — ₱1,850 — In Stock</option>
+                  <option value="Deepcool PL750D-V2 750w 80+ Bronze ATX 3.1 (Gen5 Ready) (Gen5 Ready)" data-price="3550" data-watt="750">Deepcool PL750D-V2 750w 80+ Bronze ATX 3.1 — ₱3,550 — In Stock</option>
+                  <option value="FSP DAGGER PRO 650W 80+ Gold SFX" data-price="5550" data-watt="650">FSP DAGGER PRO 650W 80+ Gold SFX — ₱5,550 — In Stock</option>
+                  <option value="corsair-rm1000x" data-price="10950" data-watt="1000">Corsair RM1000x 1000W — ₱10,950 — In Stock</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label>Peripherals</label>
+              <div id="peripheralsList" class="multi-input">
+                <div class="peripheral-row">
+                  <select class="peripheral-select form-control" name="peripherals[]">
+                    <option value="" data-price="0" data-watt="0">— Optional —</option>
+                    <option value="keyboard" data-price="5700" data-watt="1">Logitech Keyboard — ₱5,700 — In Stock</option>
+                    <option value="mouse" data-price="6990" data-watt="1">Pulsar PRX Mouse — ₱6,990 — In Stock</option>
+                    <option value="headset" data-price="3800" data-watt="1">HyperX Gaming Headset — ₱3,800 — In Stock</option>
+                  </select>
+                  <button type="button" class="btn tertiary remove-peripheral">−</button>
+                </div>
+              </div>
+              <div class="multi-actions">
+                <button type="button" id="addPeripheral" class="btn secondary">+ Add peripheral</button>
+                <span class="muted small">Add multiple accessories</span>
+              </div>
+            </div>
+
+            <div class="form-row actions-row" style="display:flex;gap:12px;">
+              <button id="buildNowBtn" type="button" class="btn ghost">Consult</button>
+              <button id="buildNowBtn" type="button" class="btn primary">Build Now</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="builder-right">
+          <div class="summary card">
+            <div class="summary-title">Build Summary</div>
+            <div class="summary-item"><span>Estimated Price</span><strong id="estimatedPrice">₱0</strong></div>
+            <div class="summary-item"><span>Estimated Wattage (CPU + GPU)</span><strong id="estimatedWatt">0W</strong></div>
+            <div class="summary-item"><span>Compatibility</span><strong id="compatStatus" class="compat-unknown">Unknown</strong></div>
+            <div class="summary-item"><span>Selected Parts</span>
+              <div id="selectedParts" class="selected-list">—</div>
+            </div>
+          </div>
+
+          <div class="info card">
+            <h4>Need help?</h4>
+            <p>Chat with us or call <strong>0966-227-3529</strong>. All builds include testing and warranty.</p>
+            <ul class="features-list">
+              <li>Hand-Assembled</li>
+              <li>Zero Bloatware</li>
+              <li>Performance Tested</li>
+              <li>3-Year Warranty</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+<style>
+  /* ================================
+   PC BUILDER — DARK THEME
+   Matches STORE.html aesthetics
+================================ */
+
+/* Section wrapper */
+@font-face {
+        font-family: "CustomFont";
+        src: url("Deutschlander.otf") format("opentype");
+      }
+
+.builder-section {
+  padding: 80px 40px;
+  background: #5CC4FF;
+  color: #fff;
+}
+
+/* Grid layout */
+.builder-wrap {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Left panel */
+.builder-left {
+  flex: 2;
+}
+
+/* Right summary panel */
+.builder-right {
+  flex: 1.2;
+}
+
+/* Card styling (matches product card sharp edges) */
+.card {
+  background: #111;
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+/* Titles */
+.section-title {
+  font-family: 'CustomFont';
+  font-size: 70px;
+  letter-spacing: 3px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.builder-form label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Dropdowns */
+.form-control {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: 2px solid #444;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 16px;
+}
+
+.form-control:hover,
+.form-control:focus {
+  border-color: #fff;
+}
+
+/* Grid helpers */
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Multi-input rows (storage/peripherals) */
+.storage-row,
+.peripheral-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn.secondary {
+  border-color: #888;
+}
+
+.btn.tertiary {
+  border-color: #666;
+  padding: 4px 12px;
+}
+
+/* Build buttons row */
+.actions-row .btn.primary {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  font-weight: bold;
+}
+.actions-row .btn.primary:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Summary panel */
+.summary .summary-title {
+  font-family: 'CustomFont';
+  font-size: 50px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.selected-list {
+  margin-top: 10px;
+  background: #000;
+  padding: 10px;
+  border: 1px solid #444;
+  min-height: 50px;
+}
+
+/* Compatibility statuses */
+.compat-unknown {
+  color: #aaa;
+}
+.compat-ok {
+  color: #4dff4d;
+}
+.compat-bad {
+  color: #ff4d4d;
+}
+
+/* Info box */
+.info h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.features-list li {
+  margin-left: 18px;
+  font-size: 16px;
+}
+
+</style>
+
+<script>
+  /* ================================
+   PC BUILDER SCRIPT
+================================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const priceEl = document.getElementById("estimatedPrice");
+  const wattEl  = document.getElementById("estimatedWatt");
+  const compatEl = document.getElementById("compatStatus");
+  const partsEl  = document.getElementById("selectedParts");
+
+  const inputs = document.querySelectorAll(".form-control, .storage-select, .peripheral-select");
+
+  // --- MAIN UPDATE FUNCTION ---
+  function updateSummary() {
+    let totalPrice = 0;
+    let totalWatt  = 0;
+    let selectedParts = [];
+
+    // Fetch static components
+    document.querySelectorAll(".form-control").forEach(sel => {
+      if (sel.value !== "") {
+        totalPrice += Number(sel.selectedOptions[0].dataset.price || 0);
+        totalWatt  += Number(sel.selectedOptions[0].dataset.watt  || 0);
+        selectedParts.push(sel.selectedOptions[0].textContent.trim());
+      }
+    });
+
+    // Storage array
+    document.querySelectorAll(".storage-select").forEach(sel => {
+      if (sel.value !== "") {
+        totalPrice += Number(sel.selectedOptions[0].dataset.price);
+        totalWatt  += Number(sel.selectedOptions[0].dataset.watt);
+        selectedParts.push(sel.selectedOptions[0].textContent.trim());
+      }
+    });
+
+    // Peripherals
+    document.querySelectorAll(".peripheral-select").forEach(sel => {
+      if (sel.value !== "") {
+        totalPrice += Number(sel.selectedOptions[0].dataset.price);
+        totalWatt  += Number(sel.selectedOptions[0].dataset.watt);
+        selectedParts.push(sel.selectedOptions[0].textContent.trim());
+      }
+    });
+
+    // Update UI
+    priceEl.textContent = `₱${totalPrice.toLocaleString()}`;
+    wattEl.textContent  = totalWatt + "W";
+
+    // Compatibility
+    checkCompatibility();
+    partsEl.innerHTML = selectedParts.length ? selectedParts.join("<br>") : "—";
+  }
+
+  // --- COMPATIBILITY CHECK (CPU ↔ Motherboard ↔ RAM) ---
+  function checkCompatibility() {
+    const cpu = document.getElementById("cpu").selectedOptions[0];
+    const mobo = document.getElementById("motherboard").selectedOptions[0];
+    const ram = document.getElementById("memory").selectedOptions[0];
+
+    let cpuSocket = cpu.dataset.socket;
+    let moboSocket = mobo.dataset.socket;
+
+    let cpuMem = cpu.dataset.mem;
+    let moboMem = mobo.dataset.mem;
+    let ramMem = ram.dataset.mem;
+
+    // If nothing selected
+    if (!cpuSocket || !moboSocket || !cpuMem || !moboMem) {
+      compatEl.textContent = "Unknown";
+      compatEl.className = "compat-unknown";
+      return;
+    }
+
+    // Socket mismatch
+    if (cpuSocket !== moboSocket) {
+      compatEl.textContent = "Socket Mismatch";
+      compatEl.className = "compat-bad";
+      return;
+    }
+
+    // Memory mismatch
+    if (cpuMem !== moboMem || cpuMem !== ramMem) {
+      compatEl.textContent = "Memory Type Mismatch";
+      compatEl.className = "compat-bad";
+      return;
+    }
+
+    // All good
+    compatEl.textContent = "Compatible";
+    compatEl.className = "compat-ok";
+  }
+
+  // Listen to all changes
+  inputs.forEach(i => i.addEventListener("change", updateSummary));
+
+  // --- Add Storage ---
+  document.getElementById("addStorage").addEventListener("click", () => {
+    const container = document.getElementById("storageInputs");
+    const row = document.createElement("div");
+    row.className = "storage-row";
+
+    row.innerHTML = `
+      <select class="storage-select form-control">
+        <option value="" data-price="0" data-watt="0">— Select Storage —</option>
+        <option value="adata-1tb-legend960" data-price="5650" data-watt="3">Adata Legend 960 Max 1TB — ₱5,650 — In Stock</option>
+        <option value="samsung-990pro-1tb" data-price="6950" data-watt="3">Samsung 990 Pro 1TB — ₱6,950 — In Stock</option>
+      </select>
+      <button type="button" class="btn tertiary remove-storage">−</button>
+    `;
+
+    row.querySelector("select").addEventListener("change", updateSummary);
+    row.querySelector(".remove-storage").addEventListener("click", () => {
+      row.remove();
+      updateSummary();
+    });
+
+    container.appendChild(row);
+  });
+
+  // --- Add Peripherals ---
+  document.getElementById("addPeripheral").addEventListener("click", () => {
+    const list = document.getElementById("peripheralsList");
+    const row = document.createElement("div");
+    row.className = "peripheral-row";
+
+    row.innerHTML = `
+      <select class="peripheral-select form-control">
+        <option value="" data-price="0" data-watt="0">— Optional —</option>
+        <option value="keyboard" data-price="5700" data-watt="1">Logitech Keyboard — ₱5,700 — In Stock</option>
+        <option value="mouse" data-price="6990" data-watt="1">Pulsar PRX Mouse — ₱6,990 — In Stock</option>
+        <option value="headset" data-price="3800" data-watt="1">HyperX Gaming Headset — ₱3,800 — In Stock</option>
+      </select>
+      <button type="button" class="btn tertiary remove-peripheral">−</button>
+    `;
+
+    row.querySelector("select").addEventListener("change", updateSummary);
+    row.querySelector(".remove-peripheral").addEventListener("click", () => {
+      row.remove();
+      updateSummary();
+    });
+
+    list.appendChild(row);
+  });
+
+});
+
+</script>
+
+<style>
+/* Hero Section */
+.store-hero {
+  width: 100%;
+  height: 500px; /* banner height */
+  background: url('BG1.png') no-repeat 50% 43% / cover;        /* custom fine control */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-title {
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+  letter-spacing: 3px;
+  font-weight: 300;
+  font-family: 'CustomFont', sans-serif;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px 20px;
+  padding-bottom: 100px;
+  border-radius: 1px;
+}
+
+/* Products Section */
+.store-products {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* always 4 per row */
+  gap: 30px;
+  align-items: start;
+  padding-left: 10px;       /* keeps items aligned at the top */
+  grid-auto-rows: 1fr;      /* forces equal row heights */
+}
+
+/* Product Card */
+.product-card {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Image Wrapper (hover only here) */
+.product-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.product-image img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Hide back by default */
+.product-image img.back {
+  opacity: 0;
+}
+
+/* Hover swap ONLY on image wrapper */
+.product-image:hover img.front {
+  opacity: 0;
+}
+.product-image:hover img.back {
+  opacity: 1;
+}
+
+/* Product Info (not part of hover effect) */
+.product-info {
+  padding: 10px;
+  text-align: left;
+  border: 2px solid #000000;
+  background: #ffffff;
+}
+
+.product-info h3 {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: 'CustomFont', sans-serif;
+  text-transform: uppercase;
+  margin: 8px 0 4px;
+}
+
+.product-info p {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: 'CustomFont', sans-serif;
+  margin: 2px 0;
+}
+
+.product-price {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight:500;
+  font-family: 'CustomFont', sans-serif;
+  margin: 5px 0;
+}
+
+/* Color options (clickable) */
+.color-options {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.color-options span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+.color-options span:hover {
+  transform: scale(1.2);
+}
+
+</style>
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Left side -->
+        <div class="footer-left">
+          <img src="logo.png" alt="Logo" class="footer-logo" />
+          <p>© 2025 PC2GO. All Rights Reserved.</p>
+        </div>
+
+        <!-- Right side -->
+        <div class="footer-right">
+          <div class="footer-column">
+            <h3
+              style="
+                font-family: 'CustomFont', sans-serif;
+                font-size: 50px;
+                letter-spacing: 4px;
+                font-weight: 300;
+              "
+            >
+              PC2GO
+            </h3>
+            <ul>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3
+              style="
+                font-family: 'CustomFont', sans-serif;
+                font-size: 50px;
+                letter-spacing: 4px;
+                font-weight: 300;
+              "
+            >
+              PERIPHERALS
+            </h3>
+            <ul>
+              <li><a href="#">Mouse</a></li>
+              <li><a href="#">Keyboard</a></li>
+              <li><a href="#">Headset</a></li>
+              <li><a href="#">Monitor</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3
+              style="
+                font-family: 'CustomFont', sans-serif;
+                font-size: 50px;
+                letter-spacing: 4px;
+                font-weight: 300;
+              "
+            >
+              BRANDS
+            </h3>
+            <ul>
+              <li><a href="#">Logitech</a></li>
+              <li><a href="#">Rotobox</a></li>
+              <li><a href="#">ASUS</a></li>
+              <li><a href="#">Nvidia</a></li>
+              <li><a href="#">AMD</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
